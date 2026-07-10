@@ -1,0 +1,68 @@
+/**
+ * File: nav.css
+ * Description: Contains styles for the navigation section, logo, and menu links.
+ * Part of the components module.
+ */
+
+/* Navigation section container */
+.nav-section {
+  align-content: center;
+  display: grid;
+  justify-items: center;
+  height: 50vh;
+  width: 20%;
+  text-align: center;
+  gap: 5px;
+}
+
+/* Logo styling with custom animation and shadow */
+.logo {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-coler);
+  letter-spacing: 3px;
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  animation: color-changing 1s infinite alternate linear;
+  text-shadow: 4px 4px 0px var(--theme-color2);
+}
+
+/* Navigation list item styling */
+.nav-section li {
+  display: inline-block;
+  margin-bottom: 10%;
+  transition:
+    transform 0.2s ease-in,
+    opacity 0.5s,
+    visibility 0.5s ease-in-out;
+}
+
+/* Navigation link styling */
+.nav-section li a {
+  padding: 0px 50px;
+  color: var(--text-coler);
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border: 1px solid var(--theme-color2);
+  background-color: var(--theme-color1);
+  box-shadow: 5px 5px var(--theme-color2);
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: var(--theme-color1);
+  border: 1px solid var(--theme-color2);
+  color: var(--text-coler);
+  cursor: pointer;
+  box-shadow: 5px 5px var(--theme-color2);
+}
+
+.back-btn:hover {
+  background-color: var(--theme-color2);
+  border: 1px solid var(--theme-color1);
+  box-shadow: 5px 5px var(--theme-color1);
+}

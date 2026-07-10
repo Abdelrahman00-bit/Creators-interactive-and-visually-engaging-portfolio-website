@@ -1,0 +1,134 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css files -->
+    <link rel="stylesheet" href="css styles/style.css" />
+    <link rel="stylesheet" href="css styles/components/nav.css" />
+    <link rel="stylesheet" href="css styles/components/card.css" />
+    <link rel="stylesheet" href="css styles/animations.css" />
+    <!-- swiper link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- web fonts css link -->
+    <link rel="stylesheet" href="css styles/all.min.css" />
+
+    <!-- Font Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>creators</title>
+  </head>
+
+  <body>
+    <div class="nav-section">
+      <h1 class="logo">creators</h1>
+      <ul class="nav-bar">
+        <li><a href="#profiles" class="js-btn">about us</a></li>
+        <li><a href="#" class="js-btn btn-2">services</a></li>
+        <li><a href="#" class="js-btn btn-3">contact</a></li>
+      </ul>
+    </div>
+
+    <div id="profiles" class="warpper">
+      <button class="back-btn">Back</button>
+      <!-- profile 1 -->
+
+      <div class="card-box">
+        <div class="profile-img profile-1">
+          <img src="images/Profile1-removebg-preview.png" alt="" />
+        </div>
+        <div class="profile-content">
+          <h3 class="name">Alex Smith</h3>
+          <p class="job">Script writer</p>
+        </div>
+        <div class="media">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+      <!-- profile 2 -->
+
+      <div class="card-box">
+        <div class="profile-img">
+          <img src="images/Profile2-removebg-preview.png" alt="" />
+        </div>
+        <div class="profile-content">
+          <h3 class="name">Meriem Justine</h3>
+          <p class="job">Film director</p>
+        </div>
+        <div class="media">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+      <!-- profile 3 -->
+
+      <div class="card-box">
+        <div class="profile-img">
+          <img src="images/Profile3-removebg-preview.png" alt="" />
+        </div>
+        <div class="profile-content">
+          <h3 class="name">Gigi Happy</h3>
+          <p class="job">Video Editor</p>
+        </div>
+        <div class="media">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+      <!-- profile 4 -->
+
+      <div class="card-box">
+        <div class="profile-img">
+          <img src="images/Profile4-removebg-preview.png" alt="" />
+        </div>
+        <div class="profile-content">
+          <h3 class="name">Jimmie Clem</h3>
+          <p class="job">Video Editor</p>
+        </div>
+        <div class="media">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // If we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+    <script src="js/navigation.js"></script>
+    <script src="js/profiles.js"></script>
+  </body>
+</html>

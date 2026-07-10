@@ -1,0 +1,83 @@
+/**
+ * File: animations.css
+ * Description: Contains all keyframe animations and transition effects used throughout the site.
+ */
+
+/* Hover effect for navigation links */
+.nav-section li:hover {
+  transform: translateY(-5px);
+}
+
+/* Animation for the logo: creates a shifting linear gradient effect */
+@keyframes color-changing {
+  0% {
+    background-image: linear-gradient(var(--theme-color2) 0%, #a3bc2c 100%);
+    color: transparent;
+    background-clip: text;
+  }
+  10% {
+    background-image: linear-gradient(var(--theme-color2) 10%, #a3bc2c 90%);
+    color: transparent;
+    background-clip: text;
+  }
+  20% {
+    background-image: linear-gradient(var(--theme-color2) 20%, #a3bc2c 80%);
+    color: transparent;
+    background-clip: text;
+  }
+  30% {
+    background-image: linear-gradient(var(--theme-color2) 30%, #a3bc2c 70%);
+    color: transparent;
+    background-clip: text;
+  }
+  40% {
+    background-image: linear-gradient(var(--theme-color2) 40%, #a3bc2c 60%);
+    color: transparent;
+    background-clip: text;
+  }
+  50% {
+    background-image: linear-gradient(var(--theme-color2) 40%, #a3bc2c 60%);
+    color: transparent;
+    background-clip: text;
+  }
+  60% {
+    background-image: linear-gradient(var(--theme-color2) 30%, #a3bc2c 70%);
+    color: transparent;
+    background-clip: text;
+  }
+  70% {
+    background-image: linear-gradient(var(--theme-color2) 20%, #a3bc2c 80%);
+    color: transparent;
+    background-clip: text;
+  }
+  80% {
+    background-image: linear-gradient(var(--theme-color2) 10%, #a3bc2c 90%);
+    color: transparent;
+    background-clip: text;
+  }
+  100% {
+    background-image: linear-gradient(var(--theme-color2) 0%, #a3bc2c 100%);
+    color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Animation for navigation buttons when selected/clicked */
+@keyframes chosen-effict {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* Class to apply the selection animation */
+.chosen-effict {
+  animation: chosen-effict 1.1s ease-in normal;
+  animation-fill-mode: forwards;
+}

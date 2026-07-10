@@ -1,0 +1,42 @@
+/**
+ * File: style.css
+ * Description: Main base styles including CSS variables, resets, and global layout.
+ * This file serves as the foundation for the entire application.
+ */
+
+/* Root variables for consistent theme colors across the site */
+:root {
+  --text-coler: white;
+  --theme-color1: #a26341;
+  --theme-color2: #0e1a2a;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global reset to ensure consistency across different browsers */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Body styling with full-page background image configuration */
+body {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-image: url("../images/background\ imege.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-position-x: center;
+}
