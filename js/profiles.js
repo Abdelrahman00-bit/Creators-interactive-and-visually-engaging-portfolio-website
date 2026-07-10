@@ -25,28 +25,10 @@
     }
   };
 
-  // Initialize event listeners to detect which button was clicked
+  // Initialize event listeners for each navigation button
   startButtons.forEach((button, index) => {
     button.addEventListener("click", (event) =>
       handleProfilesVisibility(event, index),
     );
   });
-
-  // Handle the back button logic to return to the menu
-  const backBtn = document.querySelector(".back-btn");
-  if (backBtn) {
-    backBtn.addEventListener("click", () => {
-      // 1. Hide the profiles gallery
-      if (profilesWrapper) {
-        // checking if wrapper exists first
-        profilesWrapper.classList.remove("active");
-      }
-
-      // 2. Reset the navigation buttons so they are visible and usable again
-      startButtons.forEach((button) => {
-        button.classList.remove("chosen-effict");
-        button.classList.remove("clicked-btn");
-      });
-    });
-  }
 })();

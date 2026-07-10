@@ -33,4 +33,25 @@
     buttonStore.push(button);
     button.addEventListener("click", handleNavAnimation);
   });
+
+  /**
+   * Universal Back Button Logic
+   * Handles returning to the menu from any active section.
+   */
+  const backButtons = document.querySelectorAll(".back-btn");
+  backButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // 1. Find and hide any active wrapper (Profiles, Contact, etc.)
+      const activeWrapper = document.querySelector(".active");
+      if (activeWrapper) {
+        activeWrapper.classList.remove("active");
+      }
+
+      // 2. Reset the navigation buttons so they are visible again
+      startButtons.forEach((button) => {
+        button.classList.remove("chosen-effict");
+        button.classList.remove("clicked-btn");
+      });
+    });
+  });
 })();
