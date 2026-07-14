@@ -1,0 +1,68 @@
+/**
+ * File: loader.css
+ * Description: Styles for the cinematic loading screen.
+ */
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--theme-color2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Above everything */
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+.loader-wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loader-icon {
+  font-size: 4rem;
+  color: var(--theme-color1);
+  animation: clapper-snap 1.5s infinite ease-in-out;
+}
+
+.loader-bar-container {
+  width: 200px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--theme-color1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-bar-fill {
+  width: 0%;
+  height: 100%;
+  background-color: var(--theme-color1);
+  transition: width 0.4s ease-out;
+}
+
+.loader-text {
+  color: var(--text-coler);
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+@keyframes clapper-snap {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-15deg); }
+}

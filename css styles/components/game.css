@@ -1,0 +1,142 @@
+/**
+ * File: game.css
+ * Description: Styles for the Leaf Collection mini-game as a background experience.
+ */
+
+.game-wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 5; 
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.game-ui {
+  position: absolute;
+  bottom: 40px;
+  left: 110px;
+  pointer-events: auto;
+  z-index: 2100;
+}
+
+.game-score {
+  color: var(--text-coler);
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 0px var(--theme-color2);
+}
+
+/* The Basket */
+.basket-container {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 50px;
+  border: 3px solid var(--theme-color2);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(162, 99, 65, 0.3);
+  z-index: 2100;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.basket-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-image: 
+    radial-gradient(circle at 10px 10px, #8bc34a 2px, transparent 3px),
+    radial-gradient(circle at 20px 15px, #689f38 2px, transparent 3px),
+    radial-gradient(circle at 15px 25px, #aed581 2px, transparent 3px);
+  background-size: 30px 30px;
+  background-color: #558b2f;
+  transition: height 0.3s ease-out;
+}
+
+.basket-icon {
+  display: none;
+}
+
+/* The Leaves */
+.leaf {
+  position: absolute;
+  top: -50px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2050;
+  pointer-events: auto;
+  transition: transform 0.1s ease;
+}
+
+.leaf img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.leaf:active {
+  transform: scale(0.5);
+}
+
+/* Click Animation: Pops out and fades */
+.leaf-collected {
+  animation: collectPop 0.3s ease-out forwards !important;
+  pointer-events: none;
+}
+
+@keyframes collectPop {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+/* Falling and Swaying Animation */
+@keyframes fall {
+  0% {
+    top: -50px;
+    transform: translateX(0) rotate(0deg);
+  }
+  33% {
+    transform: translateX(30px) rotate(10deg);
+  }
+  66% {
+    transform: translateX(-30px) rotate(-10deg);
+  }
+  100% {
+    top: 105vh;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Leaves that go inside the basket */
+.basket-leaf {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  z-index: 2090;
+  animation: dropIn 0.3s ease-out forwards;
+}
+
+@keyframes dropIn {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(20deg);
+    opacity: 1;
+  }
+}
