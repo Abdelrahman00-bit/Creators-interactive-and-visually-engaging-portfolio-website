@@ -1,15 +1,38 @@
-                                                                                                                                         موقع شخصي بطابع ألعاب الفيديو
+Project Name: creators
+Project Description: A professional portfolio and agency website for creative professionals specializing in film, scriptwriting, and video editing.
 
-مطالب تصميم موقع شخصي يحمل طابع ألعاب الفيديو أو رسومات ال (pixels) مع مراعاة وجود الخصائص التالية :
+Core Requirements:
+1. Loading Screen:
+   - Implement a custom loading animation with a progress bar that updates from 0% to 100% before showing the main content.
 
-1- أن يكون الموقع متجاوب مع جميع أحجام العرض أوالشاشات 
+2. Navigation:
+   - A responsive navigation bar providing access to the Profiles (About Us), Services, and Contact sections.
+   - Dynamic content switching between sections.
 
-2- أن يتمتع الموقع ببعض الرسوم التي تجذب لنظر وتسهل التعامل مع الموقع من منظور المستخدم
+3. Profiles (About Us) Section:
+   - Display team member profiles using styled cards.
+   - Each profile should include:
+     - Member photo.
+     - Name and professional role.
+     - Visual skill bars (e.g., Creativity, Logic, Vision, etc.).
+     - Social media links (Instagram, Facebook, X).
 
-3- وجود خاصية لتغيير نمط الموقع الى النمط المظلم (dark mode)
+4. Services Section:
+   - Showcase agency services (Narrative Design, Visual Direction, Technical Mastery).
+   - Include detailed skill progress bars for each service (e.g., Storytelling, Framing, Editing).
 
-______________________________________________________________________________________________________________________________________
+5. Contact Section:
+   - Social media navigation boxes.
+   - A functional-looking contact form with fields for Name, Email, and Message.
 
-خلفية عن الموقع وأصحاب الموقع:
+6. Interactive Element (Mini-Game):
+   - A "Leaf Collecting" game where the user interacts with a basket to collect falling leaves.
+   - A real-time score counter.
 
-الموقع مخصص لعرض أعمال صناع محتوى  وكتاب في المجال السنيمائي وهو فريق عمل مكون من كتاب ومصورين ومحررين فيديو يجب أن يعرف الموقع خدمات هذا الفريق مع توضيح نبذة عنهم وعن بعض أعمالهم السابقة مع كيفية التواصل معهم
+Technical Stack:
+- Frontend: HTML5, CSS3, JavaScript.
+- Styling: Modular CSS for components, Custom Animations.
+- Libraries: 
+  - Font Awesome for iconography.
+  - Google Fonts (Pixelify Sans) for typography.
+  - Swiper.js for potential sliders.
