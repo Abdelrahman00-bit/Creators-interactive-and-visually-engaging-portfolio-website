@@ -4,8 +4,6 @@
 
 **Creators** is a highly interactive and visually engaging portfolio website designed for a creative agency. It showcases the team's skills in filmmaking, scriptwriting, and video editing through a modern, modular interface.
 
-
-https://github.com/user-attachments/assets/48e6c0ea-8ee9-4ed3-96f5-612c9905df25
 <video src="https://github.com/user-attachments/assets/48e6c0ea-8ee9-4ed3-96f5-612c9905df25" controls width="600"></video>
 
 ## Features
