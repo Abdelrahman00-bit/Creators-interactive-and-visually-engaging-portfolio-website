@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+  .nav-section {
+    width: 90%;
+    height: auto;
+  }
+
+  .logo {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-section li {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .nav-section li a {
+    padding: 5px 35px;
+    font-size: 1.2rem;
+  }
+
+  .social-box {
+    width: 90px;
+    height: 100px;
+    margin-top: 50px;
+  }
+  .social-box i {
+    font-size: 2rem;
+  }
+
+  .back-btn {
+    padding: 9px 15px;
+  }
+
+  .email-form-box {
+    width: 380px;
+  }
+}
