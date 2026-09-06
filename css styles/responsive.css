@@ -36,3 +36,61 @@
     width: 380px;
   }
 }
+
+/* Tablet/medium laptop: scale cards proportionally so all 4 fit in one row.
+   Scale ratio ranges from ~69.6% at 866px to ~92.3% at 1115px.
+   All dimensions use the same ratio to preserve aspect ratios. */
+@media (min-width: 866px) and (max-width: 1115px) {
+  .card-box {
+    width: clamp(191px, 22.4vw, 253px);
+    height: clamp(289px, 34vw, 383px);
+    padding-top: clamp(70px, 8.2vw, 92px);
+    border-radius: clamp(14px, 1.6vw, 20px);
+  }
+
+  .profile-img {
+    top: clamp(-42px, -4.9vw, -55px);
+    width: clamp(104px, 12.3vw, 138px);
+    height: clamp(104px, 12.3vw, 138px);
+    border-radius: clamp(14px, 1.6vw, 20px);
+    border-width: clamp(3px, 0.3vw, 4px);
+    box-shadow:
+      0 clamp(4px, 0.5vw, 5px),
+      0 clamp(11px, 1.3vw, 15px) rgba(0, 0, 0, 0.5);
+  }
+
+  .profile-content {
+    padding: 0 clamp(14px, 1.7vw, 20px);
+  }
+
+  .name {
+    font-size: clamp(1.25rem, 2.4vw, 0.66rem);
+  }
+
+  .job {
+    font-size: clamp(0.7rem, 1.3vw, 0.93rem);
+    margin-bottom: clamp(10px, 1.1vw, 15px);
+  }
+
+  .stat-row {
+    font-size: clamp(0.55rem, 1vw, 0.74rem);
+  }
+
+  .stat-row span {
+    width: clamp(56px, 6.5vw, 74px);
+  }
+
+  .stat-bar {
+    width: clamp(84px, 9.8vw, 111px);
+    height: clamp(6px, 0.7vw, 7px);
+  }
+
+  .media {
+    gap: clamp(10px, 1.2vw, 15px);
+    padding: clamp(10px, 1.2vw, 15px);
+  }
+
+  .media i {
+    font-size: clamp(0.84rem, 1.6vw, 1.1rem);
+  }
+}
