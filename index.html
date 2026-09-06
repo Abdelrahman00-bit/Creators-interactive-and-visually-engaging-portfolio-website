@@ -182,9 +182,10 @@
       <div class="services-wrapper">
        <button class="back-btn services-back-btn">← Back</button>
        
-       <div class="skill-tree-container">
+       <div class="swiper services-swiper">
+         <div class="swiper-wrapper">
          <!-- Narrative Design -->
-         <div class="skill-card">
+         <div class="skill-card swiper-slide">
            <div class="skill-icon"><i class="fa-solid fa-pen-nib"></i></div>
            <h3>Narrative Design</h3>
            <div class="skill-stats">
@@ -202,7 +203,7 @@
          </div>
 
          <!-- Visual Direction -->
-         <div class="skill-card">
+         <div class="skill-card swiper-slide">
            <div class="skill-icon"><i class="fa-solid fa-video"></i></div>
            <h3>Visual Direction</h3>
            <div class="skill-stats">
@@ -220,7 +221,7 @@
          </div>
 
          <!-- Technical Mastery -->
-         <div class="skill-card">
+         <div class="skill-card swiper-slide">
            <div class="skill-icon"><i class="fa-solid fa-clapperboard"></i></div>
            <h3>Technical Mastery</h3>
            <div class="skill-stats">
@@ -237,6 +238,14 @@
            </div>
          </div>
        </div>
+
+       <button class="swiper-arrow swiper-button-prev" aria-label="Previous">
+         <i class="fa-solid fa-chevron-left"></i>
+       </button>
+       <button class="swiper-arrow swiper-button-next" aria-label="Next">
+         <i class="fa-solid fa-chevron-right"></i>
+       </button>
+     </div><!-- /.services-swiper -->
      </div>
 
      <div class="contact-wrapper">
@@ -297,6 +306,24 @@
     <script>
       const SWIPER_BREAKPOINT = 865;
 
+      function initServicesSwiper() {
+        if (window.innerWidth > SWIPER_BREAKPOINT) return null;
+
+        return new Swiper(".services-swiper", {
+          slidesPerView: "auto",
+          centeredSlides: true,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".services-swiper .swiper-button-next",
+            prevEl: ".services-swiper .swiper-button-prev",
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+          },
+        });
+      }
+
       function initProfilesSwiper() {
         if (window.innerWidth > SWIPER_BREAKPOINT) return null;
 
@@ -316,19 +343,28 @@
       }
 
       let profilesSwiper = initProfilesSwiper();
+      let servicesSwiper = initServicesSwiper();
 
       let resizeTimer;
       window.addEventListener("resize", () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
           const isMobile = window.innerWidth <= SWIPER_BREAKPOINT;
-          const wasInitialized = profilesSwiper !== null;
+          const wasProfilesInitialized = profilesSwiper !== null;
+          const wasServicesInitialized = servicesSwiper !== null;
 
-          if (isMobile && !wasInitialized) {
+          if (isMobile && !wasProfilesInitialized) {
             profilesSwiper = initProfilesSwiper();
-          } else if (!isMobile && wasInitialized) {
+          } else if (!isMobile && wasProfilesInitialized) {
             profilesSwiper.destroy(true, true);
             profilesSwiper = null;
+          }
+
+          if (isMobile && !wasServicesInitialized) {
+            servicesSwiper = initServicesSwiper();
+          } else if (!isMobile && wasServicesInitialized) {
+            servicesSwiper.destroy(true, true);
+            servicesSwiper = null;
           }
         }, 150);
       });

@@ -114,6 +114,23 @@
     flex-shrink: 0;
   }
 
+  /* Services modal: make Swiper wrapper a real container on mobile */
+  .services-wrapper > .services-swiper {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .services-wrapper .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .services-wrapper .swiper-slide {
+    width: 280px;
+    flex-shrink: 0;
+  }
+
   /* Show themed arrow buttons */
   .swiper-arrow.swiper-button-prev,
   .swiper-arrow.swiper-button-next {

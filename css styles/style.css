@@ -87,3 +87,27 @@ body {
   height: auto;
   flex-shrink: 1;
 }
+
+
+/* Services modal: desktop overrides for Swiper wrappers.
+   display: contents makes the wrappers transparent so the natural flex
+   grid layout of .services-wrapper works as before. Layout properties
+   (gap, justify-content, align-items, flex-wrap) are preserved from the
+   original .skill-tree-container by applying them to the Swiper wrappers. */
+.services-wrapper > .services-swiper {
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.services-wrapper .swiper-wrapper {
+  display: contents;
+}
+
+.services-wrapper .swiper-slide {
+  width: auto;
+  height: auto;
+  flex-shrink: 1;
+}
