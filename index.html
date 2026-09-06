@@ -57,9 +57,13 @@
  
       <div id="profiles" class="warpper">
         <button class="back-btn">← Back</button>
-        <!-- profile 1 -->
+        
+        <div class="swiper profiles-swiper">
+          <div class="swiper-wrapper">
+
+            <!-- profile 1 -->
  
-        <div class="card-box">
+        <div class="card-box swiper-slide">
           <div class="profile-img profile-1">
             <img src="images/Profile1-removebg-preview.png" alt="" />
           </div>
@@ -86,7 +90,7 @@
  
         <!-- profile 2 -->
  
-        <div class="card-box">
+        <div class="card-box swiper-slide">
           <div class="profile-img">
             <img src="images/Profile2-removebg-preview.png" alt="" />
           </div>
@@ -112,7 +116,7 @@
         </div>
         <!-- profile 3 -->
  
-        <div class="card-box">
+        <div class="card-box swiper-slide">
           <div class="profile-img">
             <img src="images/Profile3-removebg-preview.png" alt="" />
           </div>
@@ -139,7 +143,7 @@
  
         <!-- profile 4 -->
  
-        <div class="card-box">
+        <div class="card-box swiper-slide">
           <div class="profile-img">
             <img src="images/Profile4-removebg-preview.png" alt="" />
           </div>
@@ -163,11 +167,19 @@
             <i class="fa-brands fa-x-twitter"></i>
           </div>
         </div>
-      </div>
 
+          </div><!-- /.swiper-wrapper -->
 
+          <button class="swiper-arrow swiper-button-prev" aria-label="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="swiper-arrow swiper-button-next" aria-label="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div><!-- /.profiles-swiper -->
+      </div><!-- /.warpper -->
 
-     <div class="services-wrapper">
+      <div class="services-wrapper">
        <button class="back-btn services-back-btn">← Back</button>
        
        <div class="skill-tree-container">
@@ -283,22 +295,42 @@
      <!-- swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".swiper", {
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-        },
+      const SWIPER_BREAKPOINT = 865;
 
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+      function initProfilesSwiper() {
+        if (window.innerWidth > SWIPER_BREAKPOINT) return null;
 
-        // If we need scrollbar
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
+        return new Swiper(".profiles-swiper", {
+          slidesPerView: "auto",
+          centeredSlides: true,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".profiles-swiper .swiper-button-next",
+            prevEl: ".profiles-swiper .swiper-button-prev",
+          },
+          keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+          },
+        });
+      }
+
+      let profilesSwiper = initProfilesSwiper();
+
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const isMobile = window.innerWidth <= SWIPER_BREAKPOINT;
+          const wasInitialized = profilesSwiper !== null;
+
+          if (isMobile && !wasInitialized) {
+            profilesSwiper = initProfilesSwiper();
+          } else if (!isMobile && wasInitialized) {
+            profilesSwiper.destroy(true, true);
+            profilesSwiper = null;
+          }
+        }, 150);
       });
     </script>
     <script src="js/navigation.js"></script>

@@ -64,3 +64,26 @@ body {
   background-color: var(--theme-color2);
   color: var(--theme-color1);
 }
+
+
+/* Swiper arrows: hidden by default, shown on mobile via media query */
+.swiper-arrow.swiper-button-prev,
+.swiper-arrow.swiper-button-next {
+  display: none;
+}
+
+/* On desktop (>865px), make Swiper wrappers transparent so the natural
+   flex-wrap grid layout of the modal works as before. */
+.warpper > .profiles-swiper {
+  display: contents;
+}
+
+.warpper .swiper-wrapper {
+  display: contents;
+}
+
+.warpper .swiper-slide {
+  width: auto;
+  height: auto;
+  flex-shrink: 1;
+}
