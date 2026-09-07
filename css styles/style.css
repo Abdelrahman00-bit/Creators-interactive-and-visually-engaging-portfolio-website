@@ -64,3 +64,48 @@ body {
   background-color: var(--theme-color2);
   color: var(--theme-color1);
 }
+
+/* Swiper arrows: hidden by default, shown on mobile via media query */
+.swiper-arrow.swiper-button-prev,
+.swiper-arrow.swiper-button-next {
+  display: none;
+}
+
+/* On desktop (>865px), make Swiper wrappers transparent so the natural
+   flex-wrap grid layout of the modal works as before. */
+.warpper > .profiles-swiper {
+  display: contents;
+}
+
+.warpper .swiper-wrapper {
+  display: contents;
+}
+
+.warpper .swiper-slide {
+  width: auto;
+  height: auto;
+  flex-shrink: 1;
+}
+
+/* Services modal: desktop overrides for Swiper wrappers.
+   display: contents makes the wrappers transparent so the natural flex
+   grid layout of .services-wrapper works as before. Layout properties
+   (gap, justify-content, align-items, flex-wrap) are preserved from the
+   original .skill-tree-container by applying them to the Swiper wrappers. */
+.services-wrapper > .services-swiper {
+  display: contents;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.services-wrapper .swiper-wrapper {
+  display: contents;
+}
+
+.services-wrapper .swiper-slide {
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+}

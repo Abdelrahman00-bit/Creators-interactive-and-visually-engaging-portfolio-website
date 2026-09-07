@@ -12,7 +12,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 1000;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -45,7 +45,7 @@
   border: 2px solid var(--theme-color2);
   box-shadow: 8px 8px var(--theme-color2);
   border-radius: 20px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in-out;
   text-align: center;
 }
 
@@ -89,7 +89,7 @@
   background-color: var(--theme-color2);
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .progress-bar-fill {
@@ -155,7 +155,7 @@
   background-color: var(--theme-color2);
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .progress-bar-fill {
