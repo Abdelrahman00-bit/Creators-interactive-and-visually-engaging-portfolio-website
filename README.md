@@ -56,10 +56,16 @@ The project follows a modular structure for both CSS and JavaScript to ensure ma
 - **JavaScript**: DOM manipulation, game logic, and state management for section switching.
 - **External Assets**: Font Awesome for icons and Google Fonts for a unique "Pixelify" aesthetic.
 
+## Changelog
+### - 2026-09-08
+#### Added
+- Implemented mobile-first responsive breakpoints to ensure optimal layout on all devices.
+- Added asset minification and lazy loading to significantly decrease initial load times.
+
+ <video src="https://github.com/user-attachments/assets/850c3cee-7d70-46a9-9266-84ea82cbecbd" controls width="600"></video>
+
 ## Future Enhancements
 
-- **Responsive Design**: Ensure optimal performance and layout on mobile devices and various screen sizes.
-- **Performance Optimization**: Minify assets and implement lazy loading for faster initial load times.
 - **Accessibility Improvements**: Add ARIA labels, keyboard navigation.
 
 ## How to Run
